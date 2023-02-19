@@ -10,9 +10,9 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
 
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
+# imagePullSecrets: []
+# nameOverride: ""
+# fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -27,6 +27,7 @@ podAnnotations: {}
 
 podSecurityContext: {}
   # fsGroup: 2000
+
 
 securityContext: {}
   # capabilities:
