@@ -21,16 +21,8 @@
         
         stage('Install or Upgrade Helm Chart') {
             steps {
-                script {
-                    def releaseExists = sh(returnStatus: true, script: "helm status ${releaseName} >/dev/null 2>&1")
-                    
-                    if (releaseExists == 0) {
-                        sh "helm upgrade ${releaseName} ${chartName} --version ${chartVersion}"
-                    } else {
-                        sh "helm install ${releaseName} ${chartName} --version ${chartVersion}"
+                 sh 'helm install teckask webapp'
                     }
                 }
-            }
-        }
-    }
+             }
 }
